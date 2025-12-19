@@ -1,8 +1,16 @@
 public class Scoreboard {
-    private int score;
-    private boolean active;
-    public Scoreboard(String team1, String team2) {
-
+    private String teamOne;
+    private String teamTwo;
+    private int teamOneScore;
+    private int teamTwoScore;
+    private String activeTeam;
+    public Scoreboard(String one, String two) {
+        teamOne = one;
+        teamTwo = two;
+        activeTeam = teamOne;
+    }
+    public String getScore() {
+        return teamOneScore + "-" + teamTwoScore + "-" + activeTeam;
     }
     public void recordPlay(int pts) {
 
